@@ -1,4 +1,9 @@
 # TesteFront
+aqui alguns cnpj válidos para testar os endpoint:
+49.654.777/0001-69
+37.073.679/0001-59
+71.467.452/0001-26
+75.141.811/0001-01
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
