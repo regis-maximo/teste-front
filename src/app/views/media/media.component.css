@@ -1,0 +1,19 @@
+.container {
+    margin: 10px auto auto 30px;
+}
+
+.myinput {
+    margin-right: 5px;
+}
+
+.box-button {
+    display: block;
+}
+
+.box-button button {
+    margin-right: 5px;
+}
+
+.result {
+    margin: 10px auto auto 30px;
+}

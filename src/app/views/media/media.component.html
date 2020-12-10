@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>Calcular a Média</h3>
+    <mat-form-field class="example-full-width myinput">
+        <mat-label>valor A</mat-label>
+        <input name="a" type="text" [(ngModel)]="a" matInput mask="000000" placeholder="000000">
+    </mat-form-field>
+    <mat-form-field class="example-full-width myinput">
+        <mat-label>valor B</mat-label>
+        <input name="b" type="text" [(ngModel)]="b" matInput mask="000000" placeholder="000000">
+    </mat-form-field>
+
+    <div class="box-button">
+        <button [disabled]="!a || !b" mat-raised-button color="primary" (click)="calcular()">Calcular</button>
+        <button mat-raised-button color="primary" (click)="limpar()">Limpar</button>
+    </div>
+</div>
+<div class="result" *ngIf="media.result > 0">
+    <p>Resultado da média: <span>{{ media.result }}</span></p>
+</div>

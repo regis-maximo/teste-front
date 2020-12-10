@@ -1,0 +1,115 @@
+<div class="container">
+    <p>Digite o CNPJ</p>
+    <mat-form-field class="example-full-width">
+        <mat-label>cnpj</mat-label>
+        <input #cnpj matInput mask="00.000.000/0000-00" placeholder="00.000.000/0000-00">
+
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="getCpf(cnpj.value) ">Pesquisar CNPJ</button>
+</div>
+
+<div *ngIf="cnpjObj" class="container-result">
+    <h1>REPÚBLICA FEDERATIVA DO BRASIL</h1>
+    <h2>CADASTRO NACIONAL DA PESSOA JURÍDICA</h2>
+    <div class="box-1">
+        <div class="box">
+            <p>NÚMERO DE INSCRIÇÃO</p>
+            <p class="p-lower">{{ cnpjObj.numeroInscricao }}</p>
+        </div>
+        <div class="box">
+            <h3>COMPROVANTE DE INSCRIÇÃO E DE SITUAÇÃO CADASTRAL</h3>
+        </div>
+        <div class="box">
+            <p>DATA DE ABERTURA</p>
+            <p class="p-lower">{{ cnpjObj.dataAbertura }}</p>
+        </div>
+    </div>
+    <div class="box-2 box">
+        <p>NOME EMPRESARIAL</p>
+        <p class="p-lower">{{ cnpjObj.nomeEmpresarial }}</p>
+    </div>
+    <div class="box-3">
+        <div class="box">
+            <p>TÍTULO DO ESTABELECIMENTO (NOME DE FANTASIA)</p>
+            <p class="p-lower">{{ cnpjObj.nomeFantasia }}</p>
+        </div>
+        <div class="box">
+            <p>PORTE</p>
+            <p class="p-lower">{{ cnpjObj.porte }}</p>
+        </div>
+    </div>
+    <div class="box-2 box">
+        <p>CÓDIGO E DESCRIÇÃO DA ATIVIDADE ECONÔMICA PRINCIPAL</p>
+        <p class="p-lower">{{ cnpjObj.atividadePrincipal }}</p>
+    </div>
+    <div class="box-2 box">
+        <p>CÓDIGO E DESCRIÇÃO DAS ATIVIDADES ECONÔMICAS SECUNDÁRIAS</p>
+        <p class="p-lower">{{ cnpjObj.atividadeSecundaria }}</p>
+    </div>
+    <div class="box-4">
+        <div class="box">
+            <p>LOGRADOURO</p>
+            <p class="p-lower">{{ cnpjObj.logradouro }}</p>
+        </div>
+        <div class="box">
+            <p>NÚMERO</p>
+            <p class="p-lower">{{ cnpjObj.numero }}</p>
+        </div>
+        <div class="box">
+            <p>COMPLEMENTO</p>
+            <p class="p-lower">{{ cnpjObj.complemento }}</p>
+        </div>
+    </div>
+    <div class="box-4">
+        <div class="box">
+            <p>CEP</p>
+            <p class="p-lower">{{ cnpjObj.cep }}</p>
+        </div>
+        <div class="box">
+            <p> BAIRRO/DISTRITO</p>
+            <p class="p-lower">{{ cnpjObj.bairroDistrito }}</p>
+        </div>
+        <div class="box">
+            <p>MUNICÍPIO</p>
+            <p class="p-lower">{{ cnpjObj.municipio }}</p>
+        </div>
+    </div>
+    <div class="box-5">
+        <div class="box">
+            <p>ENDEREÇO ELETRÔNICO</p>
+            <p class="p-lower">{{ cnpjObj.enderecoEletronico }}</p>
+        </div>
+        <div class="box">
+            <p>TELEFONE</p>
+            <p class="p-lower">{{ cnpjObj.telefone }}</p>
+        </div>
+    </div>
+    <div class="box-2 box">
+        <p>ENTE FEDERATIVO RESPONSÁVEL (EFR)</p>
+        <p class="p-lower">{{ cnpjObj.enteFederativo }}</p>
+    </div>
+    <div class="box-3">
+        <div class="box">
+            <p>SITUAÇÃO CADASTRAL</p>
+            <p class="p-lower">{{ cnpjObj.situacaoCadastral }}</p>
+        </div>
+        <div class="box">
+            <p>DATA DA SITUAÇÃO CADASTRAL</p>
+            <p class="p-lower">{{ cnpjObj.dataSituacaoCad }}</p>
+        </div>
+    </div>
+    <div class="box-2 box">
+        <p>MOTIVO DE SITUAÇÃO CADASTRAL</p>
+        <p class="p-lower">{{ cnpjObj.motivoSituacaoCad }}</p>
+    </div>
+    <div class="box-3">
+        <div class="box">
+            <p>SITUAÇÃO ESPECIALL</p>
+            <p class="p-lower">{{ cnpjObj.situacaoEspecial }}</p>
+        </div>
+        <div class="box">
+            <p>DATA DA SITUAÇÃO ESPECIAL</p>
+            <p class="p-lower">{{ cnpjObj.dataSituacaoEsp }}</p>
+        </div>
+    </div>
+</div>
